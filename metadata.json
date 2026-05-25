@@ -1,0 +1,6 @@
+{
+  "name": "Smart Retail",
+  "description": "Smart Retail 链上管理系统 - 提供实时品类销售数量占比趋势、门店业绩排行、月度表现轨迹和区块链交易录入与核验功能。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

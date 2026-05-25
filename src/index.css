@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   Web 4.0 高清 PDF 矢量打印与导出优化系统 (Print Style Optimization)
+   ========================================================================= */
+@media print {
+  /* 隐藏所有非必要的内容（导航、侧边栏、按钮、下拉过滤框、Toast 容器等） */
+  aside,
+  nav,
+  header,
+  button,
+  .no-print,
+  .print-hidden,
+  input,
+  select,
+  .toast-container {
+    display: none !important;
+  }
+
+  /* 调整主体布局，拉宽铺满整个 PDF 画布，保留极客暗黑风格 */
+  body,
+  main,
+  #root {
+    background: #0a0e17 !important;
+    color: #f3f4f6 !important;
+    margin: 0 !important;
+    padding: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+  }
+
+  /* 打印时避免重要数据面板或图表被分页线强行截断 */
+  .card,
+  .chart-container,
+  section,
+  div[className*="rounded-"] {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}

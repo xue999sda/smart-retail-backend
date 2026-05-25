@@ -1,0 +1,33 @@
+# =========================================================================
+# Render 基础设施蓝图配置文件 (Infrastructure as Code)
+# 作用: 引导 Render 实现一键自动化容器构建、端口反向代理和环境变量注入
+# =========================================================================
+
+services:
+  - type: web
+    name: smart-retail-web4
+    # 使用免费计划级别以避免产生额外账单费用
+    plan: free
+    # 指定使用项目根目录下的 Dockerfile 进行容器化编译
+    env: docker
+    # Render 会自动监听 3001 端口并将公网 HTTPS 流量代理至该容器
+    port: 3001
+    # 地区选择：新加坡或俄勒冈，按需在导入时可调整
+    region: singapore
+    
+    # 自动重试机制
+    autoDeploy: true
+
+    envVars:
+      - key: PORT
+        value: 3001
+        
+      # 以下为 Supabase 连接凭证配置
+      # Render 会在 Blueprint 导入页面智能弹窗引导用户输入对应的值
+      - key: SUPABASE_URL
+        sync: false
+        placeholder: "请输入您的 Supabase 项目专属 API 链接 URL"
+        
+      - key: SUPABASE_ANON_KEY
+        sync: false
+        placeholder: "请输入您的 Supabase 匿名公钥 ANON_KEY"
