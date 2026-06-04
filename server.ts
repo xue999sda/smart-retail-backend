@@ -806,8 +806,12 @@ app.get("*", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
-app.listen(PORT, () => {
-  console.log(
-    `🚀 [Server] Smart Retail 链上融合后端就绪。监听地址: http://localhost:${PORT}`,
-  );
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(
+      `🚀 [Server] Smart Retail 链上融合后端就绪。监听地址: http://localhost:${PORT}`,
+    );
+  });
+}
+
+export default app;
