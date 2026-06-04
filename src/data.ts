@@ -399,60 +399,26 @@ export const INITIAL_SALES_CATEGORIES: SalesCategory[] = [
     nameKey: "phone_devices",
     items: [
       {
-        id: "m-infinix",
-        nameZh: "Infinix 智能手机",
-        nameEn: "Infinix Smartphone",
-        quantity: 6,
-        unitPrice: 177.0,
-      }, // 5/21 古店4台+拉店2台=6台
-      {
         id: "m-tecno",
-        nameZh: "TECNO 智能手机",
-        nameEn: "TECNO Smartphone",
+        nameZh: "TECNO",
+        nameEn: "TECNO",
         quantity: 6,
         unitPrice: 150.0,
-      }, // 5/21 古店6台
+      },
       {
-        id: "m-samsung",
-        nameZh: "三星 智能手机",
-        nameEn: "Samsung Smartphone",
+        id: "m-infinix",
+        nameZh: "Infinix",
+        nameEn: "Infinix",
+        quantity: 6,
+        unitPrice: 177.0,
+      },
+      {
+        id: "m-itel",
+        nameZh: "ITEL",
+        nameEn: "ITEL",
         quantity: 5,
         unitPrice: 127.8,
-      }, // 5/21 古店5台
-    ],
-  },
-  {
-    id: "large",
-    nameKey: "large_appliances",
-    items: [
-      {
-        id: "l-ac",
-        nameZh: "彩色电视",
-        nameEn: "Smart TV",
-        quantity: 2,
-        unitPrice: 310.0,
-      }, // 5/21 古店2台
-      {
-        id: "l-fridge",
-        nameZh: "双门冰箱",
-        nameEn: "Refrigerator",
-        quantity: 1,
-        unitPrice: 322.5,
-      }, // 5/21 拉店1台
-      {
-        id: "l-freezer",
-        nameZh: "深冷冷柜",
-        nameEn: "Deep Freezer",
-        quantity: 2,
-        unitPrice: 180.0,
-      }, // 5/21 古店1台+拉店1台=2台
-      {
-        id: "l-microwave",
-        nameZh: "微波炉",
-        nameEn: "Microwave Oven",
-        quantity: 2,
-        unitPrice: 113.0,
-      }, // 5/21 古店1台+拉店1台=2台
+      },
     ],
   },
   {
@@ -461,18 +427,80 @@ export const INITIAL_SALES_CATEGORIES: SalesCategory[] = [
     items: [
       {
         id: "a-own",
-        nameZh: "特许数码配件 (专营)",
-        nameEn: "Franchise Accessories",
+        nameZh: "自有品牌",
+        nameEn: "Own Brand",
         quantity: 0,
         unitPrice: 15.0,
         isInternal: true,
       },
       {
-        id: "a-gift",
-        nameZh: "精美促销礼品 (常规)",
-        nameEn: "Regular Promo Gifts",
+        id: "a-other",
+        nameZh: "非自有品牌",
+        nameEn: "Other Brand",
         quantity: 0,
         unitPrice: 8.0,
+      },
+    ],
+  },
+  {
+    id: "large",
+    nameKey: "large_appliances",
+    items: [
+      {
+        id: "l-fridge",
+        nameZh: "冰箱",
+        nameEn: "Refrigerator",
+        quantity: 1,
+        unitPrice: 322.5,
+      },
+      {
+        id: "l-tv",
+        nameZh: "电视",
+        nameEn: "TV",
+        quantity: 2,
+        unitPrice: 310.0,
+      },
+      {
+        id: "l-freezer",
+        nameZh: "冰柜",
+        nameEn: "Freezer",
+        quantity: 2,
+        unitPrice: 180.0,
+      },
+      {
+        id: "l-ac",
+        nameZh: "空调",
+        nameEn: "AC",
+        quantity: 0,
+        unitPrice: 250.0,
+      },
+      {
+        id: "l-washer",
+        nameZh: "洗衣机",
+        nameEn: "Washer",
+        quantity: 0,
+        unitPrice: 240.0,
+      },
+      {
+        id: "l-fan",
+        nameZh: "风扇",
+        nameEn: "Fan",
+        quantity: 0,
+        unitPrice: 50.0,
+      },
+      {
+        id: "l-microwave",
+        nameZh: "微波炉",
+        nameEn: "Microwave Oven",
+        quantity: 2,
+        unitPrice: 113.0,
+      },
+      {
+        id: "l-cooker",
+        nameZh: "灶具",
+        nameEn: "Cooker",
+        quantity: 0,
+        unitPrice: 150.0,
       },
     ],
   },
@@ -481,12 +509,19 @@ export const INITIAL_SALES_CATEGORIES: SalesCategory[] = [
     nameKey: "small_appliances",
     items: [
       {
-        id: "s-cooler",
-        nameZh: "冷风机",
-        nameEn: "Cooler Fan",
+        id: "s-own",
+        nameZh: "自有品牌",
+        nameEn: "Own Brand",
         quantity: 0,
         unitPrice: 120.0,
         isInternal: true,
+      },
+      {
+        id: "s-other",
+        nameZh: "非自有品牌",
+        nameEn: "Other Brand",
+        quantity: 0,
+        unitPrice: 80.0,
       },
     ],
   },
